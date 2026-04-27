@@ -84,8 +84,7 @@ def dfs(graph, start):
         if node not in visited:
             visited.add(node)
             result.append(node)
-            # push neighbors in reverse to maintain DFS order
-            stack.extend(reversed(graph[node]))
+            stack.extend(reversed(graph[node])) # push neighbors in reverse to maintain DFS order
     return result
 
 n, e = map(int, input().split())
