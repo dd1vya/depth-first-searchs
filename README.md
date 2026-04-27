@@ -79,36 +79,24 @@ def dfs(graph, start):
     visited = set()
     stack = [start]
     result = []
-
     while stack:
         node = stack.pop()
         if node not in visited:
             visited.add(node)
             result.append(node)
-            # Add neighbors in reverse order to maintain correct DFS order
-            for neighbor in reversed(graph[node]):
-                if neighbor not in visited:
-                    stack.append(neighbor)
-
+            # push neighbors in reverse to maintain DFS order
+            stack.extend(reversed(graph[node]))
     return result
 
-# Read number of nodes and edges
 n, e = map(int, input().split())
 graph = {}
-
 for _ in range(e):
     u, v = input().split()
+    graph.setdefault(u, []).append(v)
+    graph.setdefault(v, [])
 
-    if u not in graph:
-        graph[u] = []
-    if v not in graph:
-        graph[v] = []
-
-    graph[u].append(v)
-
-start_node = list(graph.keys())[0]
-output = dfs(graph, start_node)
-print(output)
+start = next(iter(graph))
+print(dfs(graph, start))
 ```
 ### OUTPUT
 <img width="445" height="371" alt="image" src="https://github.com/user-attachments/assets/526ba2e5-4a30-4bd2-be32-e2995f9d7a74" />
