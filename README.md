@@ -97,12 +97,10 @@ for _ in range(e):
 start = next(iter(graph))
 print(dfs(graph, start))
 ```
-### OUTPUT
-<img width="445" height="371" alt="image" src="https://github.com/user-attachments/assets/526ba2e5-4a30-4bd2-be32-e2995f9d7a74" />
 
 <hr>
 <h3>Sample Input</h3>
-<hr>
+
 8 9 <BR>
 A B <BR>
 A C <BR>
@@ -113,28 +111,29 @@ C G <BR>
 D F <BR>
 G F <BR>
 F H <BR>
-<hr>
+
 <h3>Sample Output</h3>
-<hr>
+
 ['A', 'B', 'E', 'D', 'C', 'G', 'F', 'H']
 
-<hr>
+
+### OUTPUT
+<img width="445" height="371" alt="image" src="https://github.com/user-attachments/assets/526ba2e5-4a30-4bd2-be32-e2995f9d7a74" />
 
 <hr>
 <h3>Sample Input</h3>
-<hr>
 5 5 <BR>
 0 1 <BR>
 0 2 <BR>
 0 3 <BR>
 2 3 <BR>
 2 4 <BR>
-<hr>
 <h3>Sample Output</h3>
-<hr>
 ['0', '1', '2', '3', '4']
 
-<hr>
+### OUTPUT
+<img width="379" height="267" alt="image" src="https://github.com/user-attachments/assets/b900f9d5-01d9-4206-8117-d30fc14d647c" />
+
 <h3>Result:</h3>
 <hr>
 <p>Thus,a Graph was constructed and implementation of Depth First Search for the same graph was done successfully.</p>
